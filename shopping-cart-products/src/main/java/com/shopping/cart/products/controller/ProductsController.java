@@ -15,9 +15,12 @@ public class ProductsController {
 	@Value("${product.service.database.name:Default Database}")
 	private String databaseName;
 	
+	@Value("${product.service.password}")
+	private String password;
+	
 	@GetMapping("/environment")
 	public String getEnvironmentDetails() {
-		return appName + databaseName;
+		return appName + databaseName + " - " + password;
 	}
 	
 }
