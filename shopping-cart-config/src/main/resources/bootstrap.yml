@@ -12,13 +12,13 @@ spring:
   application:
     name: config-service
   profiles:
-    active: ${profile:dev} 
+    active: dev 
   cloud:
     config:
       server:
         git:
           uri: https://github.com/chetanpatel2510/shoppingcart.git
-#          default-label: 92229026d9f6dcfe9fedd17ec13482db5c0ef151
+          default-label: develop
           search-paths:
           - /shopping-cart-config/**   # directory name of the project 
           clone-on-start: true
