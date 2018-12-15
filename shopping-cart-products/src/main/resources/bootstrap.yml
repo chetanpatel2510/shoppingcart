@@ -1,0 +1,20 @@
+# Set Server port
+server:
+  port: ${PORT:8081}
+  
+# Set Application Name
+spring:
+  application:
+    name: product-service
+  profiles: # Enable active profiles (It is list of profiles)
+    active:
+      - ${profile:dev}
+  cloud:    # Enable discovery of config service by service id
+    config:
+      profile: ${spring.profiles.active:dev}
+#      discovery: 
+#        enabled: true
+#        service-id: config-service
+      uri:
+      - http://localhost:9000    
+
