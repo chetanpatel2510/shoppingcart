@@ -18,6 +18,7 @@ spring:
       server:
         git:
           uri: https://github.com/chetanpatel2510/shoppingcart.git
+          default-label: develop
           search-paths:
           - /shopping-cart-config/**   # directory name of the project 
           clone-on-start: true
