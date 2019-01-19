@@ -3,6 +3,10 @@ package com.shopping.cart.products.entity;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
+
+@Table("PRODUCT_DETAILS")
 public class ProductDetails implements Serializable{
 
 	/**
@@ -13,6 +17,7 @@ public class ProductDetails implements Serializable{
 	/**
 	 * code declaration
 	 */
+	@PrimaryKey
 	private String code;
 	
 	/**

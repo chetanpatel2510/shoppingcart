@@ -9,14 +9,14 @@ spring:
   profiles: # Enable active profiles (It is list of profiles)
     active:
       - ${profile:dev}
-  cloud:    # Enable discovery of config service by service id
-    config:
-      profile: ${spring.profiles.active:dev}
-#      discovery: 
-#        enabled: true
-#        service-id: config-service
-      uri:
-      - http://localhost:9000    
-encrypt:
-  key: ${encryption.key}      
+#  cloud:    # Enable discovery of config service by service id
+#    config:
+#      profile: ${spring.profiles.active:dev}
+##      discovery: 
+##        enabled: true
+##        service-id: config-service
+#      uri:
+#      - http://localhost:9000    
+#encrypt:
+#  key: ${encryption.key}      
 
