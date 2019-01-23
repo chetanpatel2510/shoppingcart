@@ -24,9 +24,21 @@ spring:
           search-paths:
           - /shopping-cart-config/**   # directory name of the project 
           clone-on-start: true
+# Information about Eureka Server
+eureka:         #tells about the Eureka server details and its refresh time
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://devl-shopping-cart-eureka.us-east-1.elasticbeanstalk.com/eureka
+      healthcheck:
+        enabled: true
+      lease:
+        duration: 5          
 management:
   security:
     enabled: false  #disable the spring security on the management endpoints like /env, /refresh etc.
-encrypt:
-  key: ${encryption.key}    
+#encrypt:
+#  key: ${encryption.key}    
     
