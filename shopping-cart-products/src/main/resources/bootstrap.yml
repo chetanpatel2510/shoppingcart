@@ -16,7 +16,7 @@ spring:
 ##        enabled: true
 ##        service-id: config-service
 #      uri:
-#      - http://localhost:9000    
+#      - http://devl-shopping-cart-config.us-east-1.elasticbeanstalk.com    
 #encrypt:
 #  key: ${encryption.key}      
 
